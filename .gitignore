@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/e2e/dist/out-tsc
+/e2e/node_modules
+/e2e/testresults
+/.idea/libraries/selenium.xml
+/e2e/specs/TestData/SampleOne.jpeg

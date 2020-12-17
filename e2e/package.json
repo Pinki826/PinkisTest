@@ -1,0 +1,45 @@
+{
+  "name": "end-to-end",
+  "version": "1.0.0",
+  "description": "End-to-end tests for SoreMonster Application",
+  "main": "conf.js",
+  "scripts": {
+    "appium": "appium",
+    "webdriver-update": "webdriver-manager update",
+    "webdriver-start": "webdriver-manager start",
+    "img": "copyfiles specs/TestData/*.jpeg dist/out-tsc",
+    "start": "node .",
+    "pretest:dev": "tsc && npm run img",
+    "test:dev": "protractor ./config/conf.js",
+    "pretest:dev:headless": "tsc && npm run img",
+    "test:dev:headless": "protractor --capabilities.chromeOptions.args=--headless --capabilities.chromeOptions.args=--no-sandbox --capabilities.chromeOptions.args=--window-size=1920,1080' ./config/conf.js",
+    "pretest:dev:android": "tsc  && npm run img",
+    "test:dev:android": "protractor ./config/conf.Android.js"
+  },
+  "author": "Pinki Bhandari",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jasmine": "^3.6.2",
+    "@types/node": "^13.13.36",
+    "android-sdk": "^1.0.0",
+    "appium": "^1.18.3",
+    "convert-excel-to-json": "^1.7.0",
+    "copyfiles": "^2.4.0",
+    "fs-extra": "^9.0.1",
+    "jasmine": "^3.6.3",
+    "jasmine-data-provider": "^2.2.0",
+    "jasmine-reporters": "^2.3.2",
+    "jasmine-spec-reporter": "^5.0.2",
+    "package.json": "^2.0.1",
+    "protractor": "^5.4.4",
+    "protractor-html-reporter-2": "^1.0.4",
+    "protractor-screenshoter-plugin": "^0.10.3",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "webdriver-manager": "^12.1.7"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "devDependencies": {}
+}
